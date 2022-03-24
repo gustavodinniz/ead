@@ -35,7 +35,7 @@ public class LessonModel implements Serializable {
     private LocalDateTime creationDate;
 
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private ModuleModel module;
 }
